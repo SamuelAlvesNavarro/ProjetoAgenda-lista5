@@ -27,28 +27,29 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">Código</th>
-                        <th scope="col">Foto</th>
                         <th scope="col">Nome</th>
+                        <th scope="col">Apelido</th>
                         <th scope="col">E-mail</th>
                         <th scope="col">Telefone</th>
-                        <th scope="col">Editar</th>
+                        <th scope="col">Endereço</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Estado</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Alterar</th>
+                        <th scope="col">Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
                         foreach($result as $key => $row){
                             echo "<tr scope='row'>";
-                            echo "<td>".$row['id_usuario']."</td>";
-                            if($row['foto'] == ""){
-                                echo "<td></td>";
-                            }else{
-                                echo "<td><img src='". $row['foto'] ."' width='200' heigth='200'></td>";
-                            }
+                            echo "<td>".$row['id_agenda']."</td>";
                             echo "<td>".$row['nome']."</td>";
+                            echo "<td>".$row['apelido']."</td>";
                             echo "<td>".$row['email']."</td>";
-                            echo "<td>".$row['fone']."</td>";
-                            echo "<td><a href='altera_usuario.php?id_usuario=". $row['id_usuario'] ."'><button class='btn btn-primary'>Mudar</button></a></td>";
-                            echo "<td><a href='delete.php?id_usuario=". $row['id_usuario'] ."'><button class='btn btn-danger'>Excluir</button></a></td>";
+                            echo "<td><a href='altera_usuario.php?id_usuario=". $row['id_agenda'] ."'><button class='btn btn-primary'>Mudar</button></a></td>";
+                            echo "<td><a href='delete.php?id_usuario=". $row['id_agenda'] ."'><button class='btn btn-danger'>Excluir</button></a></td>";
                             echo "</tr>";
                         }
                     ?>
