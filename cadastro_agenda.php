@@ -16,7 +16,8 @@
         $emailExiste = $value['email'];
     }
     if($email == $emailExiste){
-        header("Location:cadastro_usuarioHTML.php?v=<span class='text-danger'>Este email já existe</span>");
+        echo "Esse usuário já existe<br>";
+        echo "<a href='cadastro_agenda.html'>Voltar</a>";
     }else{
         $sql = "INSERT INTO usuario VALUES(NULL, '$nome', '$apelido', '$endereco', '$bairro', '$cidade', '$estado', '$tel', '$cel', '$email', '$data')";
         $res = mysqli_query($con, $sql);
