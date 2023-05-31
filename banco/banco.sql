@@ -1,5 +1,5 @@
-CREATE DATABASE lista5
-use lista5
+CREATE DATABASE lista5;
+use lista5;
 
 CREATE TABLE agenda(
     id_agenda int primary key auto_increment not null,

@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+    <h1>Menu Principal</h1>
+    <ul>
+        <div>
+            <li><a href="cadastro_agenda.html">Cadastrar uma agenda</a></li>
+            <li><a href="listar_agendas.php">Listar Agenda</a></li>
+        </div>
+    </ul>
+
 </body>
 </html>
