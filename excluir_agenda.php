@@ -6,9 +6,8 @@
 	$result = mysqli_query($con, $sql);
 	if($result){
 		header("Location:listar_agendas.php");
-  }
-	else{
-		echo "Erro ao tentar excluir usuário: ".mysqli_error($con) . "<br>";
+  } else{
+    echo "Erro ao tentar excluir usuário: ".mysqli_error($con) . "<br>";
     echo "<a href='listar_agendas.php'>Voltar</a>";
   }
 ?>
