@@ -25,6 +25,7 @@
                 header("Location:listar_agendas.php");
             } else{
                 echo "Falha na gravação do registro<br>";
+                echo "<a href='cadastro_agenda.html>Voltar</a>'";
             }
     }
 
