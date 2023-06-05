@@ -1,6 +1,9 @@
 <?php
     require 'conexao.php';
-    $id_agenda = $_POST['id_agenda'];
+    session_start();
+
+    $id_agenda = $_SESSION['id_agenda'];
+
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
     $email = $_POST['email'];
@@ -13,7 +16,7 @@
 
 
 
-    $sql = "UPDATE agenda SET nome='".$nome."', email='".$email."', telefone='".$tel."', apelido='".$apelido."', endereco='".$endereco."', bairro='".$bairro."', cidade='".$cidade."', estado='".$estado."', celular='".$celular."' WHERE id_agenda=".$id_agenda;
+    $sql = "UPDATE agenda SET nome='$nome', email='$email', telefone='$tel', apelido='$apelido', endereco='$endereco', bairro='$bairro', cidade='$cidade', estado='$estado', celular='$celular' WHERE id_agenda= $id_agenda";
     $result = mysqli_query($con, $sql);
 
     if($result){

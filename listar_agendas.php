@@ -54,7 +54,7 @@
                             echo "<td>".$row['cidade']."</td>";
                             echo "<td>".$row['estado']."</td>";
                             echo "<td>".$row['celular']."</td>";
-                            echo "<td><a href='altera_usuario.php?id_agenda=". $row['id_agenda'] ."'><button class='btn btn-primary'>Mudar</button></a></td>";
+                            echo "<td><a href='alterar_agendas.php?id_agenda=". $row['id_agenda'] ."'><button class='btn btn-primary'>Mudar</button></a></td>";
                             echo "<td><a href='excluir_agenda.php?id_agenda=". $row['id_agenda'] ."'><button class='btn btn-danger'>Excluir</button></a></td>";
                             echo "</tr>";
                         }

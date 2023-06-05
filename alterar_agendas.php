@@ -1,11 +1,12 @@
 <?php
     require 'conexao.php';
-    session_start();
-    $id = $_GET['id_usuario'];
-    $_SESSION['id'] = $id;
-    $sql = "SELECT * FROM usuario WHERE id_usuario = '$id'";
+    $id = $_GET['id_agenda'];
+    $sql = "SELECT * FROM agenda WHERE id_agenda = '$id'";
     $result = mysqli_query($con, $sql);
     $row = mysqli_fetch_array($result);
+    session_start();
+    $_SESSION['id_agenda'] = $id;
+
 ?>
 
 
@@ -23,7 +24,7 @@
     <div class="text-center container-fluid p-4">
         <h1 class="h1">Alterar Dados do Usuário - IFSP</h1>
     </div>
-    <form method="post" action="altera_usuario_exe.php" class="container border border-black border-1 align-middle">
+    <form method="post" action="alterar_agenda.exe.php" class="container border border-black border-1 align-middle">
         <!-- <input name="id_usuario" type="hidden" value="<?php //echo $row['id_usuario'] ?>" !-->
         <div>
             <label for="" class="form-label pt-3">Nome: </label>
@@ -35,7 +36,12 @@
         </div>
         <div>
             <label for="" class="form-label">Telefone: </label>
-            <input type="tel" class="form-control ms-3" name="fone" id="nome" pattern="\([0-9]{2}\)([9]{1})?[0-9]{4}-[0-9]{4}" value="<?php echo $row['telefone'] ?>" style="width: 90%;"><br>
+            <input type="tel" class="form-control ms-3" name="tel" id="nome" pattern="\([0-9]{2}\)([9]{1})?[0-9]{4}-[0-9]{4}" value="<?php echo $row['telefone'] ?>" style="width: 90%;"><br>
+        </div>
+
+        <div>
+            <label for="" class="form-label">Celular: </label>
+            <input type="text" class="form-control" name="celular" id="nome" required value="<?php echo $row['celular'] ?>"><br>
         </div>
         
         <div>
