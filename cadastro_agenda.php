@@ -9,7 +9,7 @@
     $tel = $_POST['tel'];
     $cel = $_POST['cel'];
     $email = $_POST['email'];
-    $data = date('Ymd-His');
+    $data = date('d-m-y');
 
     $check = "SELECT * FROM agenda WHERE email = '$email'";
     foreach(mysqli_query($con, $check) as $key => $value){
