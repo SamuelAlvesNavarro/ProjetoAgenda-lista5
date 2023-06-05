@@ -19,7 +19,7 @@
         echo "Esse usuário já existe<br>";
         echo "<a href='cadastro_agenda.html'>Voltar</a>";
     }else{
-        $sql = "INSERT INTO usuario VALUES(NULL, '$nome', '$apelido', '$endereco', '$bairro', '$cidade', '$estado', '$tel', '$cel', '$email', '$data')";
+        $sql = "INSERT INTO agenda VALUES(NULL, '$nome', '$apelido', '$endereco', '$bairro', '$cidade', '$estado', '$tel', '$cel', '$email', '$data')";
         $res = mysqli_query($con, $sql);
             if(mysqli_affected_rows($con) == 1){
                 header("Location:listar_agendas.php");
