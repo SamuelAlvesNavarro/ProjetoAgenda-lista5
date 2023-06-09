@@ -22,9 +22,9 @@
 </head>
 <body>
     <div class="text-center container-fluid p-4">
-        <h1 class="h1">Alterar Dados do Usuário - IFSP</h1>
+        <h1 class="h1">Alterar Dados da Agenda - IFSP</h1>
     </div>
-    <form method="post" action="alterar_agenda.exe.php" class="container border border-black border-1 align-middle">
+    <form method="post" action="alterar_agenda.exe.php" class="container border border-black border-1 align-middle" enctype="multipart/form-data">
         <!-- <input name="id_usuario" type="hidden" value="<?php //echo $row['id_usuario'] ?>" !-->
         <div>
             <label for="" class="form-label pt-3">Nome: </label>
@@ -67,6 +67,10 @@
         <div>
             <label for="" class="form-label">Estado: </label>
             <input type="text" class="form-control" name="estado" id="nome" style="width: 17%;" required value="<?php echo $row['estado'] ?>" maxlength="2"><br>
+        </div>
+
+        <div>
+            <input type="file" name="foto" accept="image/*" id="foto"><br><br>
         </div>
 
         <div>
